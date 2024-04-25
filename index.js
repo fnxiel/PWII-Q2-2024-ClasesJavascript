@@ -1,102 +1,37 @@
 //funciones HolaMundo
-function HolaMundo(persona){
-    console.log("Hola,", persona.nombre)
-}
+const Persona = require("./model/Persona")
+const Alumno = require("./model/Alumno")
 
-
-class Persona{
-    //Atributo
-    tamano
-    nombre
-    edad
-    apellido
-
-    constructor(dimension, nombre, edad, apellido){
-        this.tamano = dimension
-        this.nombre = nombre
-        this.edad = edad
-        this.apellido = apellido
-    }
-    //Metodos
-}
-
-const objPersona = {
-    tamano: "Grande",
-    nombre: "Luke",
-    edad: 20,
-    apellido: "Skywalker"
-}
-
-const objPersona2 = {
-    tamano: "Pequeña",
-    nombree: "Leia",
-    edad: 20,
-    apellido: "Organa"
-}
-
-const persona = new Persona("Alto", "Chewaka", 40, "Solo")
+const persona = new Persona("Alto", "Chewaka", 40, "Solo", 50)
 const persona2 = new Persona("Bajo", "R2D2", 40, "Skywalker")
-const persona3 = new Persona("Mediano", "C3P0", 40, "Skywalker")
+const persona3 = new Persona("Mediano", "C3P0", 40, "Skywalker", 10)
+const alumno = new Alumno("Bajo", "Yoda", 50, "Apellido", 0)
 
-//persona.nombre = "Darth"
+console.log(alumno)
+alumno.matricularClase("Programacion Web II")
+alumno.matricularClase("Desarrollo Movil I")
 
-HolaMundo(objPersona)
-HolaMundo(objPersona2)
-HolaMundo(persona)
 console.log(persona)
-console.log(persona2)
-console.log(persona3)
-//HolaMundo("Leia")
-//HolaMundo("Anakin")
-//HolaMundo("Chewaka")
 
 
+console.log(persona.nombreCompleto)
+persona.nombre = "Kylo"
+persona.nombreCompleto = "Otra cosa"
+console.log(persona.nombreCompleto)
 
+persona.hablar("Estoy aprendiendo mucho")
+persona2.hablar("Estoy aburrido")
+persona3.hablar("Terminé la práctica")
 
+persona.ganarPuntos(10)
+persona.ganarPuntos(15)
+persona.ganarPuntos(20)
+persona2.ganarPuntos(5)
+persona3.ganarPuntos(-15)
 
+persona.ganarAmigo(persona2)
+console.log(persona)
 
-
-
-class Mobiliario{
-    //Atributos
-    material
-    tipoAmbiente
-    color
-    tipoPintura
-    cantidadPersonas
-    categoria //Silla
-}
-
-class Silla {
-    //Atributos
-    cantidadPatas
-    material
-    altura
-    ancho
-    profundidad
-}
-
-class Animal{
-    //
-    especie
-    raza
-    nombre
-    dueno
-}
-
-class Factura{
-    //
-    rtn
-    monto
-    fecha
-    cai
-    
-}
-
-class Vehiculo{
-    //
-    anual
-    marca
-    modelo
-    tipo
-}
+persona.presentarNotas()
+persona2.presentarNotas()
+persona3.presentarNotas()
