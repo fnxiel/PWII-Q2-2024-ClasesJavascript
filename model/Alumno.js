@@ -1,6 +1,7 @@
 var Persona = require('./Persona')
 
-class Alumno extends Persona{
+class Alumno extends Persona
+{
     clasesMatriculadas = []
 
     matricularClase(clase){

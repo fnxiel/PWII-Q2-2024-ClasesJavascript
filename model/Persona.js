@@ -7,9 +7,10 @@ class Persona{
     puntaje = 0
     fechaNacimiento = new Date()
     amigo
+    id
 
     //Constructor
-    constructor(dimension, nombre, edad, apellido, puntajeInicial){
+    constructor(dimension, nombre, edad, apellido, puntajeInicial, id){
         this.tamano = dimension
         this.nombre = nombre
         this.edad = edad
@@ -17,6 +18,7 @@ class Persona{
         if(puntajeInicial){
             this.puntaje = puntajeInicial
         }
+        this.id = id
     }
 
     //Metodos
